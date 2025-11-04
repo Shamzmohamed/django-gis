@@ -58,15 +58,17 @@ This allows hierarchical tracking of farms, fields, and irrigation points with r
 ```bash
 git clone https://github.com/Shamzmohamed/django-gis.git
 cd django-gis
+```
 
 ## Install dependencies
 ```
 pip install -r requirements.txt
-
+```
 ## Run development server
 ```
 python manage.py runserver
-
+```
 ## Access Django admin
 ```
 http://127.0.0.1:8000/admin/
+```
