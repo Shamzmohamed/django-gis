@@ -1,0 +1,4 @@
+Django==5.2.7
+psycopg2-binary==2.9.9    # Required if using PostgreSQL/PostGIS
+GDAL==3.6.3                # Required for GeoDjango spatial fields
+pillow==10.0.0             # Required for admin map widgets
