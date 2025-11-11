@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'farmadmin', #added
+    'wildlife',  #added
     'django.contrib.gis', #added
 ]
 
