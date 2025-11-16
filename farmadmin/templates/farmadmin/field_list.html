@@ -1,0 +1,20 @@
+{% extends "farmadmin/base.html" %}
+
+{% block content %}
+<h1>Fields</h1>
+
+<a href="{% url 'field_create' %}">➕ Add New Field</a>
+
+<ul>
+    {% for field in page_obj %}
+        <li>
+            <a href="{% url 'field_detail' field.pk %}">
+                {{ field.name }} ({{ field.crop_type }})
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% include "farmadmin/pagination.html" %}
+
+{% endblock %}

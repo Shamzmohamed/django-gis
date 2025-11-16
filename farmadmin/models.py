@@ -1,8 +1,10 @@
 # farmadmin/models.py
 from django.contrib.gis.db import models  # using GeoDjango for geometry fields
+from django.core.exceptions import ValidationError
+from .base import BaseModel
 
 # 1️⃣ Farm model — main farm record
-class Farm(models.Model):
+class Farm(BaseModel):
     name = models.CharField(max_length=100)
     owner_name = models.CharField(max_length=100)
     area = models.FloatField(help_text="Total area of the farm in hectares")
@@ -12,9 +14,13 @@ class Farm(models.Model):
     def __str__(self):
         return f"{self.name} ({self.owner_name})"
 
+    def clean(self):
+        # Basic validation: area must be positive
+        if self.area is not None and self.area <= 0:
+            raise ValidationError({"area": "Area must be greater than 0."})
 
 # 2️⃣ Field model — represents specific crop fields within a farm
-class Field(models.Model):
+class Field(BaseModel):
     CROP_CHOICES = [
         ('wheat', 'Wheat'),
         ('corn', 'Corn'),
@@ -32,9 +38,12 @@ class Field(models.Model):
     def __str__(self):
         return f"{self.name} ({self.crop_type})"
 
+    def clean(self):
+        if self.area is not None and self.area <= 0:
+            raise ValidationError({"area": "Field area must be greater than 0."})
 
 # 3️⃣ IrrigationPoint model — represents irrigation infrastructure in a field
-class IrrigationPoint(models.Model):
+class IrrigationPoint(BaseModel):
     field = models.ForeignKey(Field, on_delete=models.CASCADE, related_name="irrigation_points")
     point_id = models.CharField(max_length=50)
     location = models.PointField(srid=4326)  # geometry field (point)
