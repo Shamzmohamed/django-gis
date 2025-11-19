@@ -1,54 +1,21 @@
 # Django GIS Farm Management
 
 ## Project Overview
-
-This Django project demonstrates a **farm management system** with GIS capabilities using **GeoDjango**.  
-The system includes three models:
-
-1. **Farm** – Represents a farm owned by a farmer. Each farm has:
-   - Name
-   - Owner Name
-   - Total area (hectares)
-   - Geographic location (PointField)
-   - Creation date
-
-2. **Field** – Represents a crop section within a farm. Each field has:
-   - Name
-   - Crop type (choices: Wheat, Corn, Rice, Barley)
-   - Boundary (PolygonField)
-   - Area (hectares)
-   - Planted on date
-   - Foreign key linking it to a Farm
-
-3. **IrrigationPoint** – Represents irrigation infrastructure for a field. Each point has:
-   - Point ID
-   - Location (PointField)
-   - Water source
-   - Installed on date
-   - Foreign key linking it to a Field
-
-The models are fully linked via foreign keys:
-
-This allows hierarchical tracking of farms, fields, and irrigation points with real-world GIS mapping.
-
+This project is a Django GIS application for managing **Farms**, **Fields**, and **Irrigation Points**, extended with full **CRUD Class-Based Views (CBVs)** and GIS features using GeoDjango.
 ---
-
 ## Features
-
-- **GeoDjango integration:**  
-  All models with spatial fields (PointField and PolygonField) display interactive maps in the Django admin using OpenLayers.
-
-- **Admin interface customization:**
-  - `list_display` shows multiple columns per model
-  - `search_fields` allows searching by key attributes (e.g., Farm name, Field name, Point ID)
-  - `list_filter` enables filtering by crop type and farm
-  - `raw_id_fields` for foreign keys enables efficient lookup for large datasets
-
-- **Custom `__str__` methods:**  
-  Makes admin displays human-readable, e.g., `Wheat Field 1 (Wheat)` instead of `Field object (1)`.
-
-- **Migrations:**  
-  All models have migrations applied successfully.
+- GeoDjango models using `PointField` and `PolygonField`
+- Django Admin with search, filtering, and interactive GIS map widgets
+- CRUD operations implemented with **Class-Based Views** for:
+  - Farm
+  - Field
+- Shared BaseModel with:
+  - `last_update` (auto-updated)
+  - `last_update_by` (auto-updated with logged-in user)
+- Metadata fields are **read-only** in forms
+- Success messages for create/update/delete
+- Pagination on list pages
+- Simple navigation menu for smooth user flow
 
 ---
 
@@ -71,4 +38,21 @@ python manage.py runserver
 ## Access Django admin
 ```
 http://127.0.0.1:8000/admin/
+```
+## 🌐 CRUD URLs
+**Farms**
+```
+List → http://127.0.0.1:8000/farms/
+Create → http://127.0.0.1:8000/farms/add/
+Detail → http://127.0.0.1:8000/farms/<id>/
+Update → http://127.0.0.1:8000/farms/<id>/edit/
+Delete → http://127.0.0.1:8000/farms/<id>/delete/
+```
+**Fields**
+```
+List → http://127.0.0.1:8000/fields/
+Create → http://127.0.0.1:8000/fields/add/
+Detail → http://127.0.0.1:8000/fields/<id>/
+Update → http://127.0.0.1:8000/fields/<id>/edit/
+Delete → http://127.0.0.1:8000/fields/<id>/delete/
 ```
