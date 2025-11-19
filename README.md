@@ -2,6 +2,7 @@
 
 ## Project Overview
 This project is a Django GIS application for managing **Farms**, **Fields**, and **Irrigation Points**, extended with full **CRUD Class-Based Views (CBVs)** and GIS features using GeoDjango.
+
 ---
 ## Features
 - GeoDjango models using `PointField` and `PolygonField`
