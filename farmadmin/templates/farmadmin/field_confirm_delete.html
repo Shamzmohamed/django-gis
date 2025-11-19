@@ -1,0 +1,14 @@
+{% extends "farmadmin/base.html" %}
+
+{% block content %}
+<h1>Delete Field</h1>
+
+<p>Are you sure you want to delete "{{ field }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+</form>
+
+<a href="{% url 'field_detail' field.pk %}">Cancel</a>
+{% endblock %}

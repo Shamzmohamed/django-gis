@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farm Admin</title>
+    <style>
+        nav a { margin-right: 15px; font-weight: bold; }
+        .messages { color: green; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/farms/">Farms</a>
+    <a href="/fields/">Fields</a>
+</nav>
+
+<hr>
+
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

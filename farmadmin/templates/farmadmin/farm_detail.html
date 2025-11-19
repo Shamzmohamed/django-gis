@@ -1,0 +1,19 @@
+{% extends "farmadmin/base.html" %}
+
+{% block content %}
+<h1>{{ farm.name }}</h1>
+
+<p><strong>Owner:</strong> {{ farm.owner_name }}</p>
+<p><strong>Area:</strong> {{ farm.area }} ha</p>
+<p><strong>Created on:</strong> {{ farm.created_on }}</p>
+
+<h3>Metadata</h3>
+<p><strong>Last update:</strong> {{ farm.last_update }}</p>
+<p><strong>Last update by:</strong> {{ farm.last_update_by }}</p>
+
+<a href="{% url 'farm_update' farm.pk %}">✏ Edit</a> |
+<a href="{% url 'farm_delete' farm.pk %}">🗑 Delete</a>
+<br><br>
+<a href="{% url 'farm_list' %}">⬅ Back to list</a>
+
+{% endblock %}
