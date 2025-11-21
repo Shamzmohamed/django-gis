@@ -45,15 +45,15 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 ```
-3. **Create a superuser (optional)**
+4. **Create a superuser (optional)**
 ```
 python manage.py createsuperuser
 ```
-3. **Run development server**
+5. **Run development server**
 ```
 python manage.py runserver
 ```
-4. **Access Django admin**
+6. **Access Django admin**
 ```
 http://127.0.0.1:8000/admin/
 ```
