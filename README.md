@@ -37,17 +37,29 @@ git clone https://github.com/Shamzmohamed/django-gis.git
 cd django-gis
 ```
 
-## Install dependencies
+2. **Install dependencies**
 ```
 pip install -r requirements.txt
 ```
-## Run development server
+3. **Create a superuser (optional)**
+```
+python manage.py createsuperuser
+```
+3. **Run development server**
 ```
 python manage.py runserver
 ```
-## Access Django admin
+4. **Access Django admin**
 ```
 http://127.0.0.1:8000/admin/
+```
+**Running ORM Assignment Tasks (Assignment 2)**
+```
+python manage.py run_orm
+```
+```
+All 12 ORM tasks are implemented in:
+wildlife/management/commands/run_orm.py
 ```
 ## 🌐 CRUD URLs
 **Farms**
