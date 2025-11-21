@@ -36,10 +36,14 @@ This project is a Django GIS application for managing **Farms**, **Fields**, and
 git clone https://github.com/Shamzmohamed/django-gis.git
 cd django-gis
 ```
-
 2. **Install dependencies**
 ```
 pip install -r requirements.txt
+```
+3. **Apply Migrations**
+```
+python manage.py makemigrations
+python manage.py migrate
 ```
 3. **Create a superuser (optional)**
 ```
@@ -53,13 +57,19 @@ python manage.py runserver
 ```
 http://127.0.0.1:8000/admin/
 ```
-**Running ORM Assignment Tasks (Assignment 2)**
+**ORM Assignment Tasks (Assignment 2)**
 ```
+git checkout django-lesson-2-orm  #Switch to branch 2
 python manage.py run_orm
 ```
 ```
 All 12 ORM tasks are implemented in:
 wildlife/management/commands/run_orm.py
+```
+**CRUD Views (Assignment 3)**
+Two models from the farming app (Farm & Field) have full CRUD operations using Class-Based Views:
+```
+git checkout django-lesson-3-cbv  #Switch to branch 3
 ```
 ## 🌐 CRUD URLs
 **Farms**
