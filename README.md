@@ -68,7 +68,7 @@ All 12 ORM tasks are implemented in:
 wildlife/management/commands/run_orm.py
 ```
 ---
-**CRUD Views (Assignment 3)**
+## CRUD Views (Assignment 3)
 Two models from the farming app (Farm & Field) have full CRUD operations using Class-Based Views:
 ```
 git checkout django-lesson-3-cbv  #Switch to branch 3
