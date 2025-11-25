@@ -6,14 +6,16 @@
 <a href="{% url 'farm_create' %}">➕ Add New Farm</a>
 
 <ul>
-    {% for farm in page_obj %}
+    {% for farm in farms %}
         <li>
             <a href="{% url 'farm_detail' farm.pk %}">{{ farm.name }}</a>
             ({{ farm.owner_name }})
         </li>
+    {% empty %}
+        <p>No farms available.</p>
     {% endfor %}
 </ul>
 
-{% include "farmadmin/pagination.html" %}
+{% include "farmadmin/pagination.html" with page_obj=farms %}
 
 {% endblock %}
