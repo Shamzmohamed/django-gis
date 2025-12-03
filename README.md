@@ -11,6 +11,8 @@ This project is a Django GIS application for managing **Farms**, **Fields**, and
 | **main** | Models with GIS fields, migrations, and fully configured Django Admin. |
 | **django-lesson-2-orm** | Wildlife app added + all ORM query tasks implemented via `run_orm` command. |
 | **django-lesson-3-cbv** | Full CRUD using Class-Based Views (CBVs) for Farm + Field, BaseModel improvements, templates, pagination, messages. |
+| **django-lesson-4-fbv** | |
+| **django-lesson-5-test** | |
 
 ---
 ## Features
