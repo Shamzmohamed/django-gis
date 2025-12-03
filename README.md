@@ -93,6 +93,7 @@ Update → http://127.0.0.1:8000/fields/<id>/edit/
 Delete → http://127.0.0.1:8000/fields/<id>/delete/
 ```
 ### Function Based Views - FBV (Assignment 4)
+Function-Based Views (FBVs) version of CRUD operations for Farm and Field, including BaseModel inheritance, automatic last_update and last_update_by, read-only form fields, success messages, pagination, and improved navigation.
 ```
 Features:
 Paginated list views
@@ -107,4 +108,12 @@ path("farms/add/", farm_create, name="farm_create"),
 path("farms/<int:pk>/", farm_detail, name="farm_detail"),
 path("farms/<int:pk>/edit/", farm_update, name="farm_update"),
 path("farms/<int:pk>/delete/", farm_delete, name="farm_delete"),
+```
+### Django ORM Test (Assignment 5)
+Comprehensive unit tests for the Wildlife app using Django’s TestCase. Includes test data setup, validation of all ORM queries from Lesson 2, edge-case handling (empty provinces, missing taxon), aggregation checks, and full test coverage ensuring query correctness.
+```
+All tests are located in:
+wildlife/tests.py
+Run tests:
+python manage.py test wildlife
 ```
