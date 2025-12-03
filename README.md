@@ -94,13 +94,7 @@ Delete → http://127.0.0.1:8000/fields/<id>/delete/
 ```
 ### Function Based Views - FBV (Assignment 4)
 Function-Based Views (FBVs) version of CRUD operations for Farm and Field, including BaseModel inheritance, automatic last_update and last_update_by, read-only form fields, success messages, pagination, and improved navigation.
-```
-Features:
-Paginated list views
-Auto-update last_update and last_update_by
-Success messages
-Clean UI templates
-```
+
 **Example URL Patterns**
 ```
 path("farms/", farm_list, name="farm_list"),
