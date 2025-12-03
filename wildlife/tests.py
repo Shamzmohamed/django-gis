@@ -199,3 +199,13 @@ class WildlifeORMTests(TestCase):
         ).distinct()
 
         self.assertNotIn(empty_province, provinces)
+
+    # ---------------------------------------------------------------
+    # 11. Edge Case: Querying a non-existent taxon should NOT crash
+    # ---------------------------------------------------------------
+    def test_non_existent_taxon_query(self):
+        """Querying for a taxon that does not exist should return None, not crash."""
+    
+        result = Taxon.objects.filter(scientific_name="Unknown Species").first()
+
+        self.assertIsNone(result, "Querying for missing taxon should return None")
