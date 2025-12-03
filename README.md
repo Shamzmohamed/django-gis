@@ -92,3 +92,19 @@ Detail → http://127.0.0.1:8000/fields/<id>/
 Update → http://127.0.0.1:8000/fields/<id>/edit/
 Delete → http://127.0.0.1:8000/fields/<id>/delete/
 ```
+### Function Based Views - FBV (Assignment 4)
+```
+Features:
+Paginated list views
+Auto-update last_update and last_update_by
+Success messages
+Clean UI templates
+```
+**Example URL Patterns**
+```
+path("farms/", farm_list, name="farm_list"),
+path("farms/add/", farm_create, name="farm_create"),
+path("farms/<int:pk>/", farm_detail, name="farm_detail"),
+path("farms/<int:pk>/edit/", farm_update, name="farm_update"),
+path("farms/<int:pk>/delete/", farm_delete, name="farm_delete"),
+```
